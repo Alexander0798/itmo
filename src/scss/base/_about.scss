@@ -1,0 +1,56 @@
+@import "../config/function.scss";
+@import "../config/constant.scss";
+.about {
+    background-color: $blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 rem(12) rem(54);
+    &__title {
+        margin: 0 0 rem(12);
+        font-weight: 600;
+        font-size: rem(16);
+        line-height: rem(22);
+        text-transform: uppercase;
+    }
+
+    &__sub-title {
+        margin: 0 0 rem(32);
+        font-size: rem(12);
+        line-height: rem(16);
+    }
+}
+@media (min-width: em(768)) {
+    .about {
+        padding: 0 rem(39) rem(81);
+
+        &__title {
+            margin: 0 0 rem(30);
+            font-weight: 600;
+            font-size: rem(24);
+            line-height: rem(33);
+            letter-spacing: rem(0.1);
+        }
+
+        &__sub-title {
+            margin: 0 0 rem(45);
+        }
+    }
+}
+@media (min-width: em(1024)) {
+    .about {
+        &__title {
+            font-size: rem(36);
+            line-height: rem(68);
+        }
+
+        &__sub-title {
+            max-width: rem(907);
+            margin: 0 0 rem(62);
+            font-size: rem(18);
+            line-height: rem(30);
+            letter-spacing: rem(0.1);
+        }
+    }
+}

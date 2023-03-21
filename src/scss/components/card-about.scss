@@ -1,0 +1,68 @@
+@import "../config/function.scss";
+@import "../config/constant.scss";
+.card-about {
+    box-sizing: border-box;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+    margin-top: rem(17);
+    display: flex;
+    flex-direction: column;
+    padding: rem(20);
+    flex: 0 0 rem(288);
+    background-color: $paleBlue;
+    border-radius: rem(10);
+    font-size: rem(12);
+    line-height: rem(16);
+    color: $darkBlue;
+    &__icon {
+        align-self: flex-end;
+        margin: rem(-35) rem(-32) 0 0;
+        width: rem(32);
+        height: rem(32);
+    }
+    &__date {
+        margin: 0;
+        font-style: italic;
+        color: $lightBlue;
+    }
+    &__title {
+        margin: rem(8) 0 rem(12) 0;
+        padding-bottom: rem(12);
+        border-bottom: rem(1) solid $lightBlue;
+        font-weight: 600;
+        font-size: rem(14);
+        line-height: rem(19);
+    }
+    &__description {
+        margin: 0;
+    }
+}
+@media (min-width: em(768)) {
+    .card-about {
+        position: relative;
+        flex: 0 0 rem(330);
+        font-size: rem(14);
+        line-height: rem(19);
+  
+        &__icon {
+            width: rem(40);
+            height: rem(40);
+        }
+        &__title {
+            margin: rem(8) 0 rem(20) 0;
+            padding-bottom: rem(20);
+            font-size: rem(18);
+            line-height: rem(30);
+        }
+    }
+}
+@media (min-width: em(1024)) {
+    .card-about {
+        flex: 0 0 rem(348);
+        &__icon {
+            width: rem(40);
+            height: rem(41.76);
+        }
+    }
+}

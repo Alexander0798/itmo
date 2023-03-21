@@ -1,0 +1,144 @@
+@import "../config/function.scss";
+@import "../config/constant.scss";
+.industrial-card {
+    background: linear-gradient($white, $white);
+    box-sizing: border-box;
+    max-width: rem(140);
+    padding: rem(10);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem(16) 0;
+    color: $blue;
+    font-size: rem(10);
+    line-height: rem(14);
+    border-radius: rem(5);
+    transition: all 0.3s;
+    &__title {
+        z-index: 1;
+        margin: 0;
+        font-weight: 600;
+        line-height: rem(13.62);
+        letter-spacing: rem(0.06);
+    }
+    &__container_img {
+        z-index: 1;
+        background-color: $white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: rem(40);
+        height: rem(40);
+        border-radius: 50%;
+        box-shadow: rem(0) rem(2.24314) rem(11.2157) $shadowBlue;
+    }
+    &__img {
+        width: rem(19.43);
+        height: rem(19.43);
+    }
+
+    &__description {
+        z-index: 1;
+        margin: 0;
+        letter-spacing: rem(0.1);
+    }
+
+    &__button {
+        z-index: 1;
+        box-sizing: border-box;
+        display: flex;
+        height: rem(32);
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        padding: rem(5);
+        border: rem(1) solid $blue;
+        border-radius: rem(5);
+        color: $blue;
+        text-decoration: none;
+        background-color: $white;
+    }
+}
+.industrial-card:hover {
+    background: linear-gradient($lightBlue, $lightBlue);
+}
+.industrial-card:hover .industrial-card__button {
+    color: $lightBlue;
+    border: none;
+}
+@media (min-width: em(768)) {
+    .industrial-card {
+        &_project {
+            background: linear-gradient($transparentWhite, $transparentWhite), url(../img/industrial/bcProject.png) center no-repeat, linear-gradient($white, $white);
+            &:hover {
+                background: linear-gradient($transparentBlue, $transparentBlue), url(../img/industrial/bcProject.png) center no-repeat, linear-gradient($lightBlue, $lightBlue);
+                color: $white;
+            }
+        }
+        &_brain {
+            background: linear-gradient($transparentWhite, $transparentWhite), url(../img/industrial/bcBrain.png) center no-repeat, linear-gradient($white, $white);
+            &:hover {
+                background: linear-gradient($transparentBlue, $transparentBlue), url(../img/industrial/bcBrain.png) center no-repeat, linear-gradient($lightBlue, $lightBlue);
+                color: $white;
+            }
+        }
+        &_micro {
+            background: linear-gradient($transparentWhite, $transparentWhite), url(../img/industrial/bcMicro.png) center no-repeat, linear-gradient($white, $white);
+            &:hover {
+                background: linear-gradient($transparentBlue, $transparentBlue), url(../img/industrial/bcMicro.png) center no-repeat, linear-gradient($lightBlue, $lightBlue);
+                color: $white;
+            }
+        }
+        &_robot {
+            background: linear-gradient($transparentWhite, $transparentWhite), url(../img/industrial/bcRobot.png) center no-repeat, linear-gradient($white, $white);
+            &:hover {
+                background: linear-gradient($transparentBlue, $transparentBlue), url(../img/industrial/bcRobot.png) center no-repeat, linear-gradient($lightBlue, $lightBlue);
+                color: $white;
+            }
+        }
+        max-width: rem(150);
+        padding: rem(12);
+        gap: rem(20) 0;
+        &__title {
+            font-size: rem(12);
+            line-height: rem(16);
+        }
+        &__container_img {
+            width: rem(42);
+            height: rem(42);
+            border-radius: 50%;
+            box-shadow: rem(0) rem(2.24314) rem(11.2157) $shadowBlue;
+        }
+        &__img {
+            width: rem(20);
+            height: rem(20);
+        }
+    }
+    .industrial-card:hover {
+        transform: translateY(rem(-11));
+    }
+}
+@media (min-width: em(1296)) {
+    .industrial-card {
+        max-width: rem(235);
+        padding: rem(20);
+        gap: rem(50) 0;
+        font-size: rem(14);
+        line-height: rem(20);
+        &__title {
+            font-size: rem(18);
+            line-height: rem(30);
+        }
+        &__container_img {
+            width: rem(70);
+            height: rem(70);
+            border-radius: 50%;
+            box-shadow: rem(0) rem(4) rem(20) $shadowBlue;
+        }
+        &__img {
+            width: rem(34);
+            height: rem(34);
+        }
+    }
+}

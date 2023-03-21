@@ -1,0 +1,102 @@
+@import "../config/function.scss";
+@import "../config/constant.scss";
+
+.technologies {
+    position: relative;
+    min-width: 100%;
+    display: flex;
+    justify-content: start;
+    z-index: 1;
+    &::before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1;
+        content: "";
+        background: url("../img/Background.png") center / cover no-repeat;
+        transform: scale(-1, 1);
+    }
+    &__content {
+        max-width: rem(445);
+        padding: rem(30) rem(16) rem(60) rem(16);
+        display: flex;
+        flex-direction: column;
+    }
+    &__title {
+        margin: 0 0 rem(16);
+        font-weight: 700;
+        font-size: rem(32);
+        line-height: rem(44);
+        letter-spacing: rem(0.1);
+        &_normal {
+            font-weight: 400; 
+        }
+    }
+    &__sub-title {
+        margin: 0 0 rem(50);
+        font-weight: 400;
+        font-size: rem(14);
+        line-height: rem(19);
+    }
+
+    &__button {
+        border: rem(1) solid #ffffff;
+        border-radius: rem(10);
+        background: transparent;
+        color: inherit;
+        font-family: inherit;
+        font-weight: 600;
+        font-size: rem(14);
+        display: flex;
+        min-height: rem(44);
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        min-width: rem(288);
+        &:hover {
+            border-color: #000;
+            color: #000;
+        }
+    }
+}
+@media (min-width: em(560)) {
+    .technologies {
+        &__title {
+            font-size: rem(54);
+            line-height: rem(68);
+        }
+        &__sub-title {
+            font-size: rem(18);
+            line-height: calc(30 / 18);
+        }
+
+        &__button {
+            min-width: rem(330);
+            min-height: rem(60);
+        }
+    }
+}
+@media (min-width: em(768)) {
+    .technologies {
+        &__content {
+            padding: rem(58) 0 rem(120) rem(30);
+        }
+        &__button {
+            font-size: rem(18);
+        }
+    }
+}
+@media (min-width: em(1024)) {
+    .technologies {
+        justify-content: end;
+
+        &::before {
+            transform: scale(1);
+        }
+        &__content {
+            padding: rem(92) rem(165) rem(124) 0;
+        }
+    }
+}

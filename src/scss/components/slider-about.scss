@@ -1,0 +1,81 @@
+@import "../config/function.scss";
+@import "../config/constant.scss";
+.slider-about {
+    max-width: rem(1266);
+    display: flex;
+    gap: 0 rem(21);
+    justify-content: center;
+    align-items: center;
+    color: $darkBlue;
+    padding: 0;
+    &__button {
+        margin: 0;
+        padding: 0;
+        display: none;
+        height: 60px;
+        flex: 0 0 60px;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+        border: none;
+        border-radius: 50%;
+        box-shadow: rem(0) rem(4) rem(30) rgba(224, 240, 255, 0.1);
+        color: $white;
+        font-size: rem(24);
+
+        &_left {
+        }
+
+        &_right {
+        }
+    }
+
+    &__cards {
+        overflow: hidden;
+        width: 90vw;
+    }
+    &__card-container {
+        width: 100%;
+        position: relative;
+        top: 0;
+        left: rem(1);
+        display: flex;
+        gap: 0 rem(20);
+    }
+    &__card {
+    }
+}
+.slider-navigation {
+    display: flex;
+    gap: 0 rem(8);
+    margin-top: rem(14);
+    &__stage {
+        height: rem(8);
+        width: rem(8);
+        border-radius: 50%;
+        background-color: $white;
+        opacity: 0.5;
+        &_active {
+            opacity: 1;
+        }
+    }
+}
+@media (min-width: em(768)) {
+    .slider-navigation {
+        display: flex;
+        gap: 0 rem(12);
+        margin-top: rem(17);
+    }
+}
+@media (min-width: em(1294)) {
+    .slider-about {
+        &__button {
+            display: flex;
+        }
+    }
+    .slider-navigation {
+        display: flex;
+        gap: 0 rem(21);
+        margin-top: rem(26);
+    }
+}
