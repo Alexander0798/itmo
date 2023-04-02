@@ -1,0 +1,39 @@
+@import "../config/function.scss";
+@import "../config/constant.scss";
+.projects-card {
+    display: flex;
+    flex-wrap: wrap;
+    margin: rem(20) 0 rem(8) 0;
+    padding: 0;
+    list-style: none;
+    padding: rem(10);
+    background: $lightBlue;
+    max-width: rem(140);
+    &__logo {
+        margin: 0 0 rem(8);
+    }
+
+    &__description {
+        margin: 0;
+        font-size: rem(10);
+        line-height: rem(14);
+        letter-spacing: rem(0.1);
+    }
+
+    &__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: rem(20);
+        height: rem(20);
+        background: $white;
+        border-radius: 50%;
+        border: none;
+        box-shadow: rem(0) rem(2.20472) rem(11.0236) $shadowBlue;
+        color: $lightBlue;
+        font-size: rem(12);
+        font-weight: 900;
+        padding: 0;
+        margin-left: auto;
+    }
+}
